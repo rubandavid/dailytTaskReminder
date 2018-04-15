@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="org.dtr.modal.UserDetails" schema="calusblog" table="user_details">
+
+
+		<id name="userId" type="java.lang.Integer">
+			<column name="user_id" />
+			<generator class="identity" />
+		</id>
+
+
+		<property name="userName" column="user_name" type="string"></property>
+		<property name="emailId" column="email_id" type="string"></property>
+		<property name="password" column="password" type="string"></property>
+		<property name="status" column="status" type="string"></property>
+
+
+
+</class>
+</hibernate-mapping>    
+    
+    
+    

@@ -1,0 +1,22 @@
+CREATE TABLE `task_details` (
+  `task_id` int(11) NOT NULL AUTO_INCREMENT,
+  `task_description` varchar(600) DEFAULT NULL,
+  `task_date` date DEFAULT NULL,
+  `start_time` time DEFAULT NULL,
+  `end_time` time DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`task_id`),
+  KEY `user_id_fk_idx` (`user_id`),
+  CONSTRAINT `user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user_details` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `user_details` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(145) DEFAULT NULL,
+  `password` varchar(145) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `email_id` varchar(105) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;

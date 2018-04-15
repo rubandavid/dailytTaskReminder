@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="org.dtr.modal.TaskDetails" schema="calusblog" table="task_details">
+
+
+		<id name="taskId" type="java.lang.Integer">
+			<column name="task_id" />
+			<generator class="identity" />
+		</id>
+
+
+		<property name="taskDescription" column="task_description" type="string"></property>
+		<property name="taskDate" column="task_date" type="java.util.Date"></property>
+		<property name="startTime" column="start_time" type="string"></property>
+		<property name="endTime" column="end_time" type="string"></property>
+		<property name="status" column="status" type="string"></property>
+
+		 <many-to-one name="userDetails" class="org.dtr.modal.UserDetails" lazy="false" fetch="join"> 
+		 <column name="user_id" /> </many-to-one> 
+
+ 
+ <!--  <many-to-one name = "userDetails" column = "user_id"  unique="true" 
+         class="org.dtr.modal.UserDetails" /> -->
+ 
+		<!--  <set name="userDetails" table="user_details" inverse="true" lazy="false" fetch="join" >
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="org.dtr.modal.UserDetails" />
+    </set> -->
+
+
+</class>
+</hibernate-mapping>    
+    
+    
+    
