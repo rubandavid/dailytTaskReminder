@@ -3,7 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-<class name="org.dtr.modal.TaskDetails" schema="calusblog" table="task_details">
+<class name="org.dtr.modal.TaskDetails" schema="dtm" table="task_details">
 
 
 		<id name="taskId" type="java.lang.Integer">

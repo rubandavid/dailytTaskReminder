@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<class name="org.dtr.modal.UserDetails" schema="calusblog" table="user_details">
+<class name="org.dtr.modal.UserDetails" schema="dtm" table="user_details">
 
 
 		<id name="userId" type="java.lang.Integer">
